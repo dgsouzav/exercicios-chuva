@@ -3,6 +3,7 @@ const getCompareSnapshotsPlugin = require('cypress-visual-regression/dist/plugin
 
 export default defineConfig({
   env: {
+    baseUrl: 'http://localhost:5500',
     screenshotsFolder: './cypress/snapshots/actual',
     trashAssetsBeforeRuns: true,
     video: true,
