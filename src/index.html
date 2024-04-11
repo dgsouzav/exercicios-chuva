@@ -298,5 +298,58 @@
             </footer>
             </div>
 </body>
+<<<<<<< HEAD
 <script src="script.js"></script>
+=======
+<script>
+    const btns = document.querySelectorAll('.btn-side-menu');
+        btns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            btns.forEach(btn => btn.classList.remove('selected'));
+            btn.classList.add('selected');
+        });
+    });
+
+    function topicComponent(assunto, conteudo) {
+        return `
+            <br>
+            <div class="topic">
+                <h4 class="h4-title">${assunto}</h4>
+                <p class="p-sub-title">Carlos Henrique Santos</p>
+                <p>${conteudo}</p>
+                <div class="topic-actions">
+                    <img src="img/3pontos.svg" alt="mais">
+                    <img src="img/coracao.svg" alt="like">
+                    <p>1 like</p>
+                    <p>1 resposta</p>
+                </div>
+            </div>
+            <br>
+        `;
+    }
+
+    function ShowForm() {
+        document.getElementById("discussion").classList.add("hidden");
+        document.getElementById("form").classList.remove("hidden");
+    }
+
+    function returnForm() {
+        document.getElementById("topic-message").classList.add("hidden");
+        document.getElementById("form").classList.remove("hidden");
+    }
+
+    function createTopic(event) {
+            event.preventDefault();
+            const assunto = document.getElementById("assunto");
+            const conteudo = document.getElementById("conteudo");
+            topic = topicComponent(assunto.value, conteudo.value);
+            document.getElementById("topic").innerHTML += topic;
+            assunto.value = "";
+            conteudo.value = "";
+            document.getElementById("form").classList.add("hidden");
+            document.getElementById("topic-message").classList.remove("hidden");
+            document.getElementById("show-topic-create").innerHTML = topic;
+    }
+</script>
+>>>>>>> f0d076fc772699a951a4396b118d01a2f3af77a3
 </html>
