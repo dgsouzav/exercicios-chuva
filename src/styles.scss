@@ -413,32 +413,40 @@
     border: none;
     height: 31px;
     padding: 0 10px;
-
 }
 
-.topic {
-    text-align: start;
-    box-shadow: $shadow-1;
-    padding: 10px 20px;
-    border-radius: 3px;
-    > h4 {
-        font-size: 16px;
-        font-weight: 700;
-        color: $primary-orange;
-        margin-bottom: 0;
-    }
-    .topic-actions {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        margin-bottom: 10px;
-        column-gap: 10px;
+.topics {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
 
-        > p {
+    .topic {
+        text-align: start;
+        cursor: pointer;
+        box-shadow: $shadow-1;
+        padding: 10px 20px;
+        border-radius: 3px;
+        > h4 {
+            font-size: 16px;
+            font-weight: 700;
+            color: $primary-orange;
             margin-bottom: 0;
+        }
+    
+        .topic-actions {
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            margin-bottom: 10px;
+            column-gap: 10px;
+    
+            > p {
+                margin-bottom: 0;
+            }
         }
     }
 }
+
 
 .form-section {
     display: flex;
@@ -488,6 +496,131 @@
     margin-bottom: 40px;
     row-gap: 20px;
 
+    .overlay-topic {
+        position: relative;
+        width: 0vw;
+        right: 1110px;
+        top: 0px;
+
+        > .overlay-item {
+            background-color: rgba(20, 20, 20, 0.5);
+            width: 77vw;
+            height: 100%;
+            margin: 0;
+        }
+    }
+}
+
+.expand-topic {
+    display: flex;
+    flex-direction: column;
+
+    .expand-topic1 {
+        background-color: $secodary-brown;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        > h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: $primary-brown;
+        }
+        .coautor {
+            font-size: 16px;
+            font-weight: 700;
+            color: $primary-orange;
+            display: flex; 
+            align-items: center; 
+        }
+        .coautor i {
+            margin-left: 5px; 
+        }
+        > div {
+            margin-left: auto; 
+            align-self: flex-end; 
+            text-align: right; 
+        }
+        .bi.bi-check-all {
+            color: $primary-orange; 
+            font-size: 30px;
+        }
+    }
+
+    .expand-topic2 {
+
+
+        > h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: $primary-brown;
+        }
+    }
+    .expand-topic3 {
+        background-color: $secodary-brown;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        > h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: $primary-brown;
+        }
+        .coautor {
+            font-size: 16px;
+            font-weight: 700;
+            color: $primary-orange;
+            display: flex; 
+            align-items: center; 
+        }
+        .coautor p {
+            margin-left: 5px; 
+        }
+        > div {
+            margin-left: auto; 
+            align-self: flex-end; 
+            text-align: right; 
+        }
+        .bi.bi-check-all {
+            color: $primary-orange; 
+            font-size: 30px;
+        }
+    }
+    .expand-topic4 {
+        background-color: $secodary-brown;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        > h4 {
+            font-size: 14px;
+            font-weight: 600;
+            color: $primary-brown;
+        }
+        .coautor {
+            font-size: 16px;
+            font-weight: 700;
+            color: $primary-orange;
+            display: flex; 
+            align-items: center; 
+        }
+        .coautor i {
+            margin-left: 5px; 
+        }
+        > div {
+            margin-left: auto; 
+            align-self: flex-end; 
+            text-align: right; 
+        }
+        .bi.bi-check-all {
+            color: $primary-orange; 
+            font-size: 30px;
+        }
+    }
+    &.collapsed {
+        display: none
+    }
 }
 
 .hidden {
@@ -495,5 +628,6 @@
 }
 
 .blur-topic {
+    width: 100vw;
     filter: blur(3px);
 }
