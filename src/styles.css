@@ -588,10 +588,6 @@
   color: #ed7838;
   font-size: 30px;
 }
-.expand-topic.collapsed {
-  display: none;
-}
-
 .hidden {
   display: none !important;
 }
